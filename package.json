@@ -13,7 +13,7 @@
     "chatbot",
     "chat"
   ],
-   "engines": {
+  "engines": {
     "node": ">=8.x",
     "npm": ">=5.x"
   },
