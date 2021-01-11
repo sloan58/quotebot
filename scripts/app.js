@@ -23,7 +23,9 @@ module.exports = (robot) => {
         break
       case 'cats':
         const unique = [...new Set(quotes.map((item) => item.Category))]
-        res.send('**Here are all the available genres:**\n' + unique.join(' '))
+        res.send(
+          '**Here are all the available categories:**\n' + unique.join(' ')
+        )
         break
       case 'qod':
         const qod = JSON.parse(fs.readFileSync(__dirname + '/qod.json'))
