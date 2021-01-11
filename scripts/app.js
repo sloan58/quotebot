@@ -10,7 +10,7 @@ module.exports = (robot) => {
       case 'help':
         const response =
           'You can use the following commands when using me:\n' +
-          '- **random**: Random Quote [optional genre]\n' +
+          '- **random**: Get a random quote\n' +
           '- **cats**: Get a list of all categories\n' +
           '- **[category]**: Get a quote from this category\n' +
           // '- **qod**: Get the Quote of the Day\n' +
