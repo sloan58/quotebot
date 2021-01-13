@@ -32,7 +32,9 @@ module.exports = (robot) => {
         res.send(`> **${qod.Quotes}**\n--- ${qod.Author}`)
         break
       default:
-        const filteredQuotes = quotes.filter((quote) => quote.Category === term)
+        const filteredQuotes = quotes.filter(
+          (quote) => quote.Category.toLowerCase() === term.toLowerCase()
+        )
         if (filteredQuotes.length) {
           const randomQuote =
             filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)]
