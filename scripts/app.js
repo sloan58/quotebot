@@ -40,8 +40,11 @@ module.exports = (robot) => {
             filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)]
           res.send(`> **${randomQuote.Quotes}**\n--- ${randomQuote.Author}`)
         } else {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
           res.send(
-            `Sorry, I couldn't find any matching quotes for the genre "${term}"`
+            `Sorry, I couldn't find any matching quotes for the category "${term}"\n` +
+              `Here's a random quote for you anyway :-)\n` +
+              `> **${randomQuote.Quotes}**\n - ${randomQuote.Author}`
           )
         }
     }
