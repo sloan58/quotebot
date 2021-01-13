@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "quotebot",
+      "script": "bin/hubot",
+      "exec_interpreter": "bash",
+      "args": "--name quotebot --adapter rocketchat",
+      "watch": ["package.json", "external-scripts.json", "scripts/"],
+      "out_file": "/var/log/quotebot/app.log",
+      "error_file": "/var/log/quotebot/err.log",
+      "port": "8079",
+      "env": {
+        "ROCKETCHAT_URL": "https://rocketchat.sloanspace.com",
+        "ROCKETCHAT_USER": "quotebot",
+        "ROCKETCHAT_ROOM": "general",
+        "ROCKETCHAT_PASSWORD": "",
+        "ROCKETCHAT_USESSL": true,
+        "RESPOND_TO_DM": true
+      }
+    }
+  ]
+}
