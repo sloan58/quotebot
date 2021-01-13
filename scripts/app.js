@@ -44,7 +44,7 @@ module.exports = (robot) => {
           res.send(
             `Sorry, I couldn't find any matching quotes for the category "${term}"\n` +
               `Here's a random quote for you anyway :-)\n` +
-              `> **${randomQuote.Quotes}**\n - ${randomQuote.Author}`
+              `> **${randomQuote.Quotes}**\n--- ${randomQuote.Author}`
           )
         }
     }
